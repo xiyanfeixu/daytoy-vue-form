@@ -1,4 +1,4 @@
-# xz
+此form是模仿element form组件的自定义form，包括验证功能
 
 ## Project setup
 ```
