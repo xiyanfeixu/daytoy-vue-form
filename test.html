@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="test">click!</button>
+  </body>
+  <script>
+    var that
+    var click_that
+    var say_that
+    class Star {
+      constructor(name) {
+        that = this
+        this.anme = name
+        this.btn = document.getElementById("test")
+        this.btn.onclick = this.clickBtn
+      }
+      clickBtn() {
+        click_that = this
+        console.log(this) // button
+        console.log(this.name) //undefined
+      }
+      say() {
+        say_that = this
+      }
+    }
+
+    var fa = new Star("肖战")
+    fa.say()
+    console.log(that === fa) //true
+    console.log(click_that === fa) //false
+    console.log(say_that === fa) //true
+  </script>
+</html>
